@@ -1,2 +1,2 @@
 # download_anime_streams
-Needs to have an m3u8 link
+You need a m3u8 file for this. Go to your favorite streaming site and click the thing you want to watch. Then click on an episode and click on F12 right after. A screen will pop up in your browser. Click on 'Network'. You'll see a table with a lot of requests. Search in the column 'Type' for m3u8. Rightclick on that one and copy the link. That's your m3u8 link. After that you can remove the last '/' and everything after that. That's your baseurl.
