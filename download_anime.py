@@ -1,3 +1,8 @@
+import requests
+import m3u8
+import subprocess
+import time
+
 def download_m3u8(baseurl, m3u8url, name):
     '''
 
@@ -14,7 +19,7 @@ def download_m3u8(baseurl, m3u8url, name):
     '''
     r = requests.get(m3u8url)
     m3u8_master = m3u8.loads(r.text)
-    data = m3u8_master.data#['playlists']#[1]['uri']
+    data = m3u8_master.data
     i = 0
     with open(f"{name}.ts","wb") as f:
         for segment in data['segments']:
